@@ -11,7 +11,7 @@ namespace SmartCarRentalsSystemPolymorphism
         public bool RequiresHelmet { get; set; } // Indicates if the motorbike requires a helmet
 
         public Motorbike(string brand, string model, int year, string licensePlate, bool requiresHelmet) // Constructor
-        : base(brand, model, year, licensePlate) 
+        : base(brand, model, year, licensePlate) // Calls the base class constructor
         {
             RequiresHelmet = requiresHelmet;
         }
