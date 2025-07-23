@@ -14,5 +14,14 @@ namespace SmartCarRentalsSystemPolymorphism
         public string Model { get; set; }
         public int Year { get; set; }
         public string LicensePlate { get; set; }
+
+        // Constructor
+        public Vehicle(string brand, string model, int year, string licensePlate)
+        {
+            Brand = brand;
+            Model = model;
+            Year = year;
+            LicensePlate = licensePlate;
+        }
     }
 }
