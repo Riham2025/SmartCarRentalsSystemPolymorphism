@@ -22,5 +22,10 @@ namespace SmartCarRentalsSystemPolymorphism
             double cost = rate * days;
             return days > 7 ? cost * 0.9 : cost; // 10% discount if more than 7 days
         }
+
+        public override double CalculateRentalCost(int days, bool withDriver) // Override the overloaded method to include driver cost
+        {
+            return base.CalculateRentalCost(days, withDriver);
+        }
     }
 }
