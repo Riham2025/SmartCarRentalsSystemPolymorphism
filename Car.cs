@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartCarRentalsSystemPolymorphism
 {
-    public class Car : Vehicle
+    class Car : Vehicle
     {
         public bool IsLuxury { get; set; } // Indicates if the car is a luxury model
 
@@ -26,6 +26,11 @@ namespace SmartCarRentalsSystemPolymorphism
         public override double CalculateRentalCost(int days, bool withDriver) // Override the overloaded method to include driver cost
         {
             return base.CalculateRentalCost(days, withDriver);
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} | Car | Luxury: {(IsLuxury ? "Yes" : "No")}";
         }
     }
 }
