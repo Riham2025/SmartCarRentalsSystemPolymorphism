@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace SmartCarRentalsSystemPolymorphism
 {
-    class Truck
+    class Truck : Vehicle
     {
+
+        public double MaxLoadKg { get; set; } // Maximum load capacity in kilograms
+
+        public Truck(string brand, string model, int year, string licensePlate, double maxLoadKg)
+            : base(brand, model, year, licensePlate)
+        {
+            MaxLoadKg = maxLoadKg;
+        }
     }
 }
