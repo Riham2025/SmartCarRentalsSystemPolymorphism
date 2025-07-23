@@ -15,5 +15,12 @@ namespace SmartCarRentalsSystemPolymorphism
         {
             IsLuxury = isLuxury;
         }
+
+        public override double CalculateRentalCost(int days) // Override the base method to calculate rental cost for cars
+        {
+            double rate = IsLuxury ? 80 : 60;
+            double cost = rate * days;
+            return days > 7 ? cost * 0.9 : cost; // 10% discount if more than 7 days
+        }
     }
 }
