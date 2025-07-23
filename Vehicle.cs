@@ -43,5 +43,11 @@ namespace SmartCarRentalsSystemPolymorphism
             return CalculateRentalCost(days) + (withDriver ? 50 * days : 0); // example: +$50 per day for driver
         }
 
+       
+        public override string ToString() // override ToString method to provide a string representation of the vehicle
+        {
+            return $"{Brand} {Model} ({Year})";
+        }
+
     }
 }
