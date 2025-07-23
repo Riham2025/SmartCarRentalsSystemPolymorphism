@@ -15,5 +15,11 @@ namespace SmartCarRentalsSystemPolymorphism
         {
             RequiresHelmet = requiresHelmet;
         }
+
+        public override double CalculateRentalCost(int days)
+        { // Override the base method to calculate rental cost for motorbikes
+            double cost = 40 * days;
+            return days > 7 ? cost * 0.9 : cost;
+        }
     }
 }
