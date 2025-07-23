@@ -31,6 +31,12 @@ namespace SmartCarRentalsSystemPolymorphism
 
         }
 
-       
-}
+        // Virtual method for rental cost
+        public virtual double CalculateRentalCost(int days)
+        {
+            return 0; // base implementation returns 0
+        }
+
+
+    }
     }
