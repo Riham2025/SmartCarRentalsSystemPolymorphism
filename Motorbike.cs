@@ -21,5 +21,13 @@ namespace SmartCarRentalsSystemPolymorphism
             double cost = 40 * days;
             return days > 7 ? cost * 0.9 : cost;
         }
+
+        public override string ToString() // override ToString method to provide a string representation of the motorbike
+        {
+            return $"{base.ToString()} | Motorbike | Helmet Required: {(RequiresHelmet ? "Yes" : "No")}";
+        }
+
+
+
     }
 }
