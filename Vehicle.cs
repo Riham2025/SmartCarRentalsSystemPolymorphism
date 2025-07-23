@@ -22,6 +22,15 @@ namespace SmartCarRentalsSystemPolymorphism
             Model = model;
             Year = year;
             LicensePlate = licensePlate;
+
+            // Year validation
+            if (DateTime.Now.Year - Year > 10)
+            {
+                Console.WriteLine($"⚠ Warning: {Brand} {Model} is more than 10 years old.");
+            }
+
         }
-    }
+
+       
 }
+    }
