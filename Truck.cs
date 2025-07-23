@@ -24,5 +24,17 @@ namespace SmartCarRentalsSystemPolymorphism
             return days > 7 ? cost * 0.9 : cost;
         }
 
+        // Overloaded: cargo weight
+        public double CalculateRentalCost(int days, double cargoWeight)
+        {
+            if (cargoWeight > MaxLoadKg)
+            {
+                Console.WriteLine(" Cargo exceeds max load!");
+                return -1;
+            }
+
+            return CalculateRentalCost(days);
+        }
+
     }
 }
