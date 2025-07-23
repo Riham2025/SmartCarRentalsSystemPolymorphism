@@ -37,6 +37,11 @@ namespace SmartCarRentalsSystemPolymorphism
             return 0; // base implementation returns 0
         }
 
+        // Overloaded method: with driver
+        public virtual double CalculateRentalCost(int days, bool withDriver)
+        {
+            return CalculateRentalCost(days) + (withDriver ? 50 * days : 0); // example: +$50 per day for driver
+        }
 
     }
 }
