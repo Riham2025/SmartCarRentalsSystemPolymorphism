@@ -16,5 +16,13 @@ namespace SmartCarRentalsSystemPolymorphism
         {
             MaxLoadKg = maxLoadKg;
         }
+
+        public override double CalculateRentalCost(int days) // Override the base method to calculate rental cost for trucks
+       
+        {
+            double cost = 100 * days;
+            return days > 7 ? cost * 0.9 : cost;
+        }
+
     }
 }
