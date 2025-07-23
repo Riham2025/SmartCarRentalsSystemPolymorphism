@@ -36,5 +36,10 @@ namespace SmartCarRentalsSystemPolymorphism
             return CalculateRentalCost(days);
         }
 
+        public override string ToString() // override ToString method to provide a string representation of the truck
+        {
+            return $"{base.ToString()} | Truck | Max Load: {MaxLoadKg}kg";
+        }
+
     }
 }
