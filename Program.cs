@@ -47,7 +47,9 @@
                             Vehicle selected = fleet[index - 1];
 
                             Console.Write("Enter number of rental days: ");
-                            if (int.TryParse(Console.ReadLine(), out int days) && days > 0)
+                            string daysInput = Console.ReadLine();
+                            if (Validator.IsPositiveInt(daysInput, out int days))
+
                             {
                                 double cost = selected.CalculateRentalCost(days);
 
