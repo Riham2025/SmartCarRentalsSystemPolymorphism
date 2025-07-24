@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-        }
+            // Step 1: Create sample vehicles
+            List<Vehicle> fleet = new List<Vehicle>
+            {
+            }
     }
 }
