@@ -58,16 +58,16 @@
                                         cost = selected.CalculateRentalCost(days, true);
                                 }
 
-                                Console.WriteLine($"✅ Total Rental Cost for {selected.Brand} {selected.Model}: {cost:C}");
+                                Console.WriteLine($" Total Rental Cost for {selected.Brand} {selected.Model}: {cost:C}");
                             }
                             else
                             {
-                                Console.WriteLine("❌ Invalid number of days.");
+                                Console.WriteLine(" Invalid number of days.");
                             }
                         }
                         else
                         {
-                            Console.WriteLine("❌ Invalid vehicle number.");
+                            Console.WriteLine(" Invalid vehicle number.");
                         }
                         break;
 
