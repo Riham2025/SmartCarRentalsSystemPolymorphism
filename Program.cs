@@ -37,6 +37,41 @@
                         }
                         break;
 
+                    case "2":
+                        //  Handle rental
+                        Console.WriteLine("\nEnter vehicle number to rent:");
+                        if (int.TryParse(Console.ReadLine(), out int index) && index >= 1 && index <= fleet.Count)
+                        {
+                            Vehicle selected = fleet[index - 1];
+
+                            Console.Write("Enter number of rental days: ");
+                            if (int.TryParse(Console.ReadLine(), out int days) && days > 0)
+                            {
+                                double cost = selected.CalculateRentalCost(days);
+
+                                // If user wants driver (optional for Car and Truck)
+                                if (selected is Car || selected is Truck)
+                                {
+                                    Console.Write("Do you want a driver? (yes/no): ");
+                                    string withDriver = Console.ReadLine().ToLower();
+                                    if (withDriver == "yes")
+                                        cost = selected.CalculateRentalCost(days, true);
+                                }
+
+                                Console.WriteLine($"✅ Total Rental Cost for {selected.Brand} {selected.Model}: {cost:C}");
+                            }
+                            else
+                            {
+                                Console.WriteLine("❌ Invalid number of days.");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("❌ Invalid vehicle number.");
+                        }
+                        break;
+
+
                 }
             }
 }
