@@ -40,7 +40,9 @@
                     case "2":
                         //  Handle rental
                         Console.WriteLine("\nEnter vehicle number to rent:");
-                        if (int.TryParse(Console.ReadLine(), out int index) && index >= 1 && index <= fleet.Count)
+                        string vehicleInput = Console.ReadLine();
+                        if (Validator.IsValidVehicleIndex(vehicleInput, fleet.Count, out int index))
+
                         {
                             Vehicle selected = fleet[index - 1];
 
