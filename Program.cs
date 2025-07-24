@@ -70,8 +70,17 @@
                             Console.WriteLine(" Invalid vehicle number.");
                         }
                         break;
+                    case "0":
+                        //  Exit program
+                        running = false;
+                        Console.WriteLine("Goodbye!");
+                        break;
 
-
+                    default:
+                        Console.WriteLine("❌ Invalid option.");
+                        break;
                 }
             }
+        }
+    }
 }
