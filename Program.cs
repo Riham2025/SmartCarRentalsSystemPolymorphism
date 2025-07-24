@@ -57,8 +57,14 @@
                                 if (selected is Car || selected is Truck)
                                 {
                                     Console.Write("Do you want a driver? (yes/no): ");
-                                    string withDriver = Console.ReadLine().ToLower();
+                                    string withDriver = Console.ReadLine().Trim().ToLower();
+                                    if (!Validator.IsYesOrNo(withDriver))
+                                    {
+                                        Console.WriteLine("❌ Please enter 'yes' or 'no'.");
+                                        break;
+                                    }
                                     if (withDriver == "yes")
+
                                         cost = selected.CalculateRentalCost(days, true);
                                 }
 
