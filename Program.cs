@@ -25,6 +25,18 @@
                 Console.WriteLine("0. Exit");
                 Console.Write("Choose an option: ");
                 string choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1":
+                        // Show vehicle list
+                        Console.WriteLine("\n--- Vehicle Fleet ---");
+                        for (int i = 0; i < fleet.Count; i++)
+                        {
+                            Console.WriteLine($"{i + 1}. {fleet[i]}");
+                        }
+                        break;
+
+                }
             }
-    }
 }
