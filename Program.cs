@@ -60,7 +60,7 @@
                                     string withDriver = Console.ReadLine().Trim().ToLower();
                                     if (!Validator.IsYesOrNo(withDriver))
                                     {
-                                        Console.WriteLine("❌ Please enter 'yes' or 'no'.");
+                                        Console.WriteLine(" Please enter 'yes' or 'no'.");
                                         break;
                                     }
                                     if (withDriver == "yes")
@@ -87,7 +87,7 @@
                         break;
 
                     default:
-                        Console.WriteLine("❌ Invalid option.");
+                        Console.WriteLine(" Invalid option.");
                         break;
                 }
             }
