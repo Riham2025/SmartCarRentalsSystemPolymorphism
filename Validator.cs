@@ -13,5 +13,12 @@ namespace SmartCarRentalsSystemPolymorphism
         {
             return int.TryParse(input, out value) && value > 0;
         }
+
+        //  Validates yes/no input
+        public static bool IsYesOrNo(string input)
+        {
+            input = input.Trim().ToLower();
+            return input == "yes" || input == "no";
+        }
     }
 }
